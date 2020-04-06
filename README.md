@@ -13,6 +13,7 @@ when input is given ecx stores 2 which is compared :
    0x8048582 <main+46>:	xor    eax,eax
 
 Furthur another string is stored to the stack
+
    0x80485ba <main+102>:	mov    DWORD PTR [ebp-0x94],eax
    0x80485c0 <main+108>:	mov    DWORD PTR [esp+0x8],0x1f
 => 0x80485c8 <main+116>:	mov    DWORD PTR [esp+0x4],0x8048910
@@ -49,10 +50,10 @@ STRING1:"_0cGjc5m9V5T3Ç8CJ0À9"
 again string1 is changed
    0x08048676 <+290>:	mov    eax,DWORD PTR [ebp-0x94]
 => 0x0804867c <+296>:	add    eax,0x8
-   0x0804867f <+299>:	mov    BYTE PTR [eax],0x5f                //changing string1[8] to '_'
+   0x0804867f <+299>:	mov    BYTE PTR [eax],0x5f                ;changing string1[8] to '_'
    0x08048682 <+302>:	mov    eax,DWORD PTR [ebp-0x94]
    0x08048688 <+308>:	add    eax,0x9
-   0x0804868b <+311>:	mov    BYTE PTR [eax],0x2e                //changing string[9]  to '.'
+   0x0804868b <+311>:	mov    BYTE PTR [eax],0x2e                ;changing string[9]  to '.'
 STRING1:"_0cGjc5m_.5T3Ç8CJ0À9"
 
 0x0804868e <+314>:	mov    edx,DWORD PTR ds:0x804a038
@@ -112,11 +113,11 @@ HERE :
 2:input
 
    0x80486ca <WPA+6>:	mov    eax,DWORD PTR [ebp+0xc]
-=> 0x80486cd <WPA+9>:	add    eax,0xb                            '\r'
+=> 0x80486cd <WPA+9>:	add    eax,0xb                          ;  '\r'
    0x80486d0 <WPA+12>:	mov    BYTE PTR [eax],0xd
    0x80486d3 <WPA+15>:	mov    eax,DWORD PTR [ebp+0xc]
    0x80486d6 <WPA+18>:	add    eax,0xc                          
-   0x80486d9 <WPA+21>:	mov    BYTE PTR [eax],0xa                 '\n'  
+   0x80486d9 <WPA+21>:	mov    BYTE PTR [eax],0xa              ;   '\n'  
 
 changes the string to :"_0cGjc5m_.5\r\nÇ8CJ0À9"
 
@@ -131,12 +132,12 @@ if the input is string1 then it gives positive o/p else it exploads
 
 HENCE:
 The input to be given is _0cGjc5m_.5\r\nÇ8CJ0À9"
+
  [But as '\r' and '\n' are escape charecters '\' are not read]
 
  So the input to be given is :"_0cGjc5m_.5$'\r'$'\n'Ç8CJ0À9"
 
-
-      giving o/p:
+  giving o/p:
 Vérification de votre mot de passe..
 '+) Authentification réussie...
  U'r root! 
