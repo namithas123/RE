@@ -132,7 +132,7 @@ then it compares the number in input with the required number:
    0x401c2e:	call   0x401e3e               //returns number to be compared
    0x401c33:	mov    rax,QWORD PTR [rax]
    0x401c36:	cmp    rax,QWORD PTR [rbp-0x18]
-```
+````
 
 After checking the first number , it goes to a function which checks ifsecond charecter is +,-,* or /
 ```
@@ -167,6 +167,7 @@ Furthur as we continue in the main,if the string size required is correct we can
    0x4016e1:	mov    rdx,QWORD PTR [rax*8+0x6052a0]
    0x4016e9:	mov    rax,QWORD PTR [rbp-0x1f8]
    0x4016f0:	cmp    rdx,rax
+   
  ```
 the result of the computation is then compared to another value which will help us choose the correct operators for that input string.
 
