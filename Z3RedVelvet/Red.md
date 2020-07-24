@@ -136,12 +136,13 @@ s.add(a26>95)
 s.add(a25<=109)
 s.add(((a25-a24)*a25^a26)-a24==1214)
 s.add(((a26-a25)*a26^a24)+a25==-1034)
-````
+s.check()
+val=s.model()
+print(val)
 
->>> s.check()
-sat
->>> val=s.model()
->>> print(val)
+```
+Giving:
+``
 [a23 = 98,
  a2 = 104,
  a16 = 66,
@@ -168,7 +169,7 @@ sat
  a15 = 95,
  a1 = 87,
  a5 = 95]
-
+``
 
 
 Converting each decimal to char
@@ -177,6 +178,7 @@ we get :
 
 
 when submited gives:
+``
 HAPPINESS:)
 HAPPINESS:)
 HAPPINESS:)
@@ -192,6 +194,8 @@ HAPPINESS:)
 HAPPINESS:)
 HAPPINESS:)
 HAPPINESS:)
+
+``
 
 But does not give flag format. so i tryed changing to "b" to "a"
 Your flag : What_You_Wanna_Be?:)_la_la  
