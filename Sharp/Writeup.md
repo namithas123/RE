@@ -1,10 +1,12 @@
-***Sharp challenge writeup!!***
+**Sharp challenge writeup!!**
 
 The challenge is basic challenge involving comparisons of strings
 
 3 main strings are used in this
 v14="r0be4t1sn0dspr0p34ly "
+
 v22="12345}iyoom"
+
 v37="lego"
 v45="TU\\]uAH%I'aiPQXYpqxyFGNOfoDELMdelm545<=!()08&/-9"
 
