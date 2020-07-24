@@ -1,6 +1,6 @@
 **Taking OFF Writeup**
 
-Found arguments from gdb from equation :
+Found arguments from gdb from equation  :
 100b+10a+c=932:
 a=3
 b=9
