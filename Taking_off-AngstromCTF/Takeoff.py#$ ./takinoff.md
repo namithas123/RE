@@ -27,9 +27,9 @@ print(''.join(y))
 Prints:"please give flag"
 
 This when given as password gives:
-``
-#Good job! You're ready to move on to bigger and badder rev!
-#Cannot read flag file.
-``
+```
+Good job! You're ready to move on to bigger and badder rev!
+Cannot read flag file.
+```
 Hence when same process is done on the shell of the CTF give:
 actf{th3y_gr0w_up_s0_f4st}
