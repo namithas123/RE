@@ -1,5 +1,7 @@
-#Nasssi
-*Mainly involves Patching *
+# Nasssi
+
+***Mainly involves Patching***
+
 To move furthur in the program , certain instructions are edited
 ```
 set *(char*)0x5555555548bb = 0x7e(from jg to jle)
