@@ -1,4 +1,4 @@
-#ECPC_writeup
+# ECPC_writeup
 
 
 The challenge is not that easy as it sounds to be.
@@ -17,7 +17,7 @@ I went through IDA and found out that there starts a loop from the begining of p
 That means the input is being asked 3 times.
 
 Further while going in through function , a function in 0x4016a8 address which had:
-```
+```c
  v8 = a3;
   v9 = 0;
   v12 = 0LL;
@@ -99,13 +99,13 @@ the input basically contains numbers and operations.
 
 At the begining of this function , 
  the length of inputed string is checked at:
- ```
+ ```asm
 => 0x401d72:	call   0x401dda
    0x401d77:	cmp    rax,QWORD PTR [rbp-0x10]
 ```
 at the begining , the first charecter is checked if it is a number or not:
 0x401bed:	sub    eax,0x30
- ```
+ ```asm
  0x401bf0:	cdqe   
    0x401bf2:	mov    QWORD PTR [rbp-0x18],rax
 => 0x401bf6:	cmp    QWORD PTR [rbp-0x18],0x0
@@ -118,7 +118,7 @@ v15 = v10 - 48;
         if ( v15 < 0 || v15 > 9 )   //if it is btw 0 and 9
           return 0LL;
 then:
-```
+```asm
    0x401c12:	mov    rdi,rax
    0x401c15:	call   0x401e18
    0x401c1a:	cmp    rax,QWORD PTR [rbp-0x20]
@@ -127,7 +127,7 @@ then:
 checks the number of numbers possible in the input(not counting the operators) 
 
 then it compares the number in input with the required number:
-````
+````asm
    0x401c2b:	mov    rdi,rax
    0x401c2e:	call   0x401e3e               //returns number to be compared
    0x401c33:	mov    rax,QWORD PTR [rax]
@@ -135,7 +135,7 @@ then it compares the number in input with the required number:
 ````
 
 After checking the first number , it goes to a function which checks ifsecond charecter is +,-,* or /
-```
+```c
   v1 = a1 - 40;
   if ( v1 == 3 )
     return 3LL;
@@ -160,7 +160,7 @@ This cycle continues till the size of particular string is completely checked,
 
 
 Furthur as we continue in the main,if the string size required is correct we can mov to :
-```
+```asm
    0x4016d2:	call   0x4014d9
 => 0x4016d7:	mov    rdx,QWORD PTR [rbp-0x1f0]
    0x4016de:	add    rax,rdx
